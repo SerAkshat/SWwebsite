@@ -15,7 +15,6 @@ document.addEventListener('DOMContentLoaded', () => {
     // Ensure Navigation is hidden initially
     document.getElementById('section-nav').style.opacity = '0';
 
-
     // Initialize Swiper for each image slider
     const sliders = document.querySelectorAll('.swiper');
     sliders.forEach((slider) => {

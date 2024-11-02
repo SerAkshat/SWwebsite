@@ -41,20 +41,31 @@ h1, h2, p {
 .title-container h1 {
     position: absolute;
     font-size: 5em;
-    top: 50%;
-    transform: translateY(-50%);
+    left: 50%;
+    transform: translateX(-50%); /* Center horizontally */
     white-space: nowrap;
     font-family: 'CustomFont', sans-serif;
+    opacity: 1; /* Ensure titles are visible initially */
 }
 
+/* Initial titles */
 #title-section {
-    right: -50%;
+    top: 40%;
     animation: sectionMove 3s forwards;
 }
 
 #title-wars {
-    left: -50%;
+    top: 60%;
     animation: warsMove 3s forwards;
+}
+
+/* Combined title */
+#title-section-wars {
+    top: 10%;
+    opacity: 0; /* Hidden initially */
+    transform: translateX(-50%); /* Center horizontally */
+    animation: fadeInCombinedTitle 1s forwards;
+    animation-delay: 3s; /* Start after initial titles fade out */
 }
 
 /* Enter Button Styles */
@@ -76,10 +87,49 @@ h1, h2, p {
     transition: opacity 1s;
     /* Animation */
     animation: fadeInButton 1s forwards;
-    animation-delay: 3s; /* Delay matching the total duration of your title animations */
+    animation-delay: 4s; /* Start after combined title appears */
 }
 
 /* Animation Keyframes */
+@keyframes sectionMove {
+    0% {
+        transform: translate(-150%, 0); /* Off-screen left */
+        opacity: 1;
+    }
+    70% {
+        transform: translate(-50%, 0); /* Center */
+        opacity: 1;
+    }
+    100% {
+        transform: translate(-50%, 0); /* Center */
+        opacity: 0; /* Fade out */
+    }
+}
+
+@keyframes warsMove {
+    0% {
+        transform: translate(50%, 0); /* Off-screen right */
+        opacity: 1;
+    }
+    70% {
+        transform: translate(-50%, 0); /* Center */
+        opacity: 1;
+    }
+    100% {
+        transform: translate(-50%, 0); /* Center */
+        opacity: 0; /* Fade out */
+    }
+}
+
+@keyframes fadeInCombinedTitle {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
 @keyframes fadeInButton {
     to {
         opacity: 1;
@@ -94,7 +144,13 @@ h1, h2, p {
     top: 0;
     width: 100%;
     z-index: 1000;
-    animation: fadeInNav 1s forwards 3s;
+    animation: fadeInNav 1s forwards 4s; /* Adjusted delay */
+}
+
+@keyframes fadeInNav {
+    to {
+        opacity: 1;
+    }
 }
 
 #section-nav .navbar-nav .nav-link {
@@ -203,53 +259,6 @@ h1, h2, p {
     height: 100%;
 }
 
-/* Animations */
-@keyframes sectionMove {
-    0% {
-        right: -50%;
-        transform: translateY(-50%);
-    }
-    40% {
-        right: 50%;
-        transform: translate(50%, -50%);
-    }
-    60% {
-        right: 50%;
-        transform: translate(50%, -50%);
-    }
-    100% {
-        left: 40%;
-        top: 10%;
-        transform: translate(-50%, 0);
-    }
-}
-
-@keyframes warsMove {
-    0% {
-        left: -50%;
-        transform: translateY(-50%);
-    }
-    40% {
-        left: 50%;
-        transform: translate(-50%, -50%);
-    }
-    60% {
-        left: 50%;
-        transform: translate(-50%, -50%);
-    }
-    100% {
-        left: 60%;
-        top: 10%;
-        transform: translate(-50%, 0);
-    }
-}
-
-@keyframes fadeInNav {
-    to {
-        opacity: 1;
-    }
-}
-
 /* Responsive Design */
 @media (max-width: 767px) {
     .section-content {
@@ -275,16 +284,31 @@ h1, h2, p {
         transform: none;
     }
 
+    /* Adjust title font size and positions */
+    .title-container h1 {
+        font-size: 3em;
+    }
+    #title-section {
+        top: 35%;
+    }
+    #title-wars {
+        top: 55%;
+    }
+    #title-section-wars {
+        top: 10%;
+    }
+
     /* Adjust button for mobile */
     #enter-button {
         font-size: 1.2em;
         padding: 8px 16px;
+        bottom: 15%;
     }
 }
 
 @media (max-width: 600px) {
     .title-container h1 {
-        font-size: 2.5em;
+        font-size: 2em;
     }
     .section-story {
         padding: 10px;
