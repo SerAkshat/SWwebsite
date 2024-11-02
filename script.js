@@ -1,6 +1,8 @@
 document.addEventListener('DOMContentLoaded', () => {
     // Initialize Foundation (if still needed)
-    $(document).foundation();
+    if (typeof $ !== 'undefined' && typeof $(document).foundation === 'function') {
+        $(document).foundation();
+    }
 
     // Navigation Scroll
     const navLinks = document.querySelectorAll('#section-nav a');
@@ -31,6 +33,21 @@ document.addEventListener('DOMContentLoaded', () => {
             },
             simulateTouch: true,
             grabCursor: true,
+        });
+    });
+
+    // Collapse the navbar when a link is clicked (on mobile screens)
+    const navbarCollapse = document.querySelector('.navbar-collapse');
+    const navbarItems = document.querySelectorAll('.navbar-nav .nav-link');
+    
+    navbarItems.forEach((item) => {
+        item.addEventListener('click', () => {
+            if (navbarCollapse.classList.contains('show')) {
+                const collapse = new bootstrap.Collapse(navbarCollapse, {
+                    toggle: false
+                });
+                collapse.hide();
+            }
         });
     });
 });
