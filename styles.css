@@ -1,0 +1,295 @@
+/* Import Custom Font */
+@font-face {
+    font-family: 'CustomFont';
+    src: url('Font.otf') format('opentype');
+}
+
+/* General Styles */
+body {
+    font-family: sans-serif;
+    background-color: #000;
+    color: #fff;
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+h1, h2, p {
+    margin: 0;
+}
+
+/* Home Page */
+#home {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background: url('bg.jpeg') no-repeat center center/cover;
+    overflow: hidden;
+}
+
+.title-container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+}
+
+.title-container h1 {
+    position: absolute;
+    font-size: 5em;
+    top: 50%;
+    transform: translateY(-50%);
+    white-space: nowrap;
+    font-family: 'CustomFont', sans-serif;
+}
+
+#title-section {
+    right: -50%;
+    animation: sectionMove 3s forwards;
+}
+
+#title-wars {
+    left: -50%;
+    animation: warsMove 3s forwards;
+}
+
+/* Enter Button Styles */
+#enter-button {
+    opacity: 0; /* Start hidden */
+    position: absolute;
+    bottom: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 1.5em;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: #fff;
+    background-color: #721313;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    pointer-events: none; /* Prevent clicking when invisible */
+    transition: opacity 1s;
+    /* Animation */
+    animation: fadeInButton 1s forwards;
+    animation-delay: 3s; /* Delay matching the total duration of your title animations */
+}
+
+/* Animation Keyframes */
+@keyframes fadeInButton {
+    to {
+        opacity: 1;
+        pointer-events: auto; /* Enable clicking when visible */
+    }
+}
+
+/* Navigation Bar */
+#section-nav {
+    opacity: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    animation: fadeInNav 1s forwards 3s;
+}
+
+#section-nav .navbar-nav .nav-link {
+    color: #fff;
+    font-size: 1em;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+#section-nav .navbar-nav .nav-link:hover {
+    background-color: #721313;
+    color: #fff;
+}
+
+/* Section Content */
+.section-content {
+    min-height: 100vh;
+    display: flex;
+}
+
+.section-content .row.no-gutters {
+    flex-grow: 1;
+}
+
+.section-story {
+    padding: 20px;
+    background-color: #111;
+    font-family: sans-serif;
+    overflow-y: auto;
+    flex: 63; /* Occupies approximately 63% of the width */
+}
+
+.image-slider {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    flex: 37; /* Occupies approximately 37% of the width */
+    border: 2px solid #000;
+    box-sizing: border-box;
+}
+
+/* Swiper Slides */
+.image-slider .swiper-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    background-color: #000;
+}
+
+/* Swiper Navigation Buttons */
+.swiper-button-next,
+.swiper-button-prev {
+    width: 40px;
+    height: 40px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10; /* Ensure buttons are above slides */
+}
+
+/* Positioning */
+.swiper-button-next {
+    right: 10px;
+}
+
+.swiper-button-prev {
+    left: 10px;
+}
+
+/* Customize the navigation icons */
+.swiper-button-next::after,
+.swiper-button-prev::after {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* Use Font Awesome icons */
+.swiper-button-next::after {
+    content: '\f054'; /* Font Awesome 'angle-right' icon */
+    font-family: 'Font Awesome 6 Free';
+    font-weight: 900;
+}
+
+.swiper-button-prev::after {
+    content: '\f053'; /* Font Awesome 'angle-left' icon */
+    font-family: 'Font Awesome 6 Free';
+    font-weight: 900;
+}
+
+/* Swiper Pagination Bullets */
+.swiper-pagination-bullet {
+    background: #fff;
+    opacity: 0.7;
+}
+
+.swiper-pagination-bullet-active {
+    opacity: 1;
+}
+
+/* Ensure Swiper container fills its parent */
+.swiper {
+    width: 100%;
+    height: 100%;
+}
+
+/* Animations */
+@keyframes sectionMove {
+    0% {
+        right: -50%;
+        transform: translateY(-50%);
+    }
+    40% {
+        right: 50%;
+        transform: translate(50%, -50%);
+    }
+    60% {
+        right: 50%;
+        transform: translate(50%, -50%);
+    }
+    100% {
+        left: 40%;
+        top: 10%;
+        transform: translate(-50%, 0);
+    }
+}
+
+@keyframes warsMove {
+    0% {
+        left: -50%;
+        transform: translateY(-50%);
+    }
+    40% {
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    60% {
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    100% {
+        left: 60%;
+        top: 10%;
+        transform: translate(-50%, 0);
+    }
+}
+
+@keyframes fadeInNav {
+    to {
+        opacity: 1;
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 767px) {
+    .section-content {
+        flex-direction: column;
+    }
+
+    .section-story,
+    .image-slider {
+        width: 100%;
+        height: auto;
+        flex: none;
+    }
+
+    .image-slider .swiper-slide img {
+        height: auto;
+    }
+
+    /* Adjust navigation buttons for mobile */
+    .swiper-button-next,
+    .swiper-button-prev {
+        top: auto;
+        bottom: 10px;
+        transform: none;
+    }
+
+    /* Adjust button for mobile */
+    #enter-button {
+        font-size: 1.2em;
+        padding: 8px 16px;
+    }
+}
+
+@media (max-width: 600px) {
+    .title-container h1 {
+        font-size: 2.5em;
+    }
+    .section-story {
+        padding: 10px;
+    }
+    #section-nav .navbar-nav .nav-link {
+        font-size: 0.9em;
+    }
+}
