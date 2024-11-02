@@ -186,6 +186,64 @@ h1, h2, p {
     color: #fff;
 }
 
+/* Navbar Transparent Styles */
+.navbar.navbar-transparent {
+    background-color: transparent !important;
+    border: none;
+    box-shadow: none;
+    transition: background-color 0.3s ease;
+}
+
+.navbar.navbar-transparent .navbar-nav {
+    display: none !important;
+}
+
+.navbar.navbar-transparent .navbar-brand {
+    color: #fff !important; /* Ensure the brand text is visible */
+    margin-left: 20px;
+}
+
+.navbar.navbar-transparent .navbar-toggler {
+    display: block !important;
+    margin-right: 20px;
+}
+
+.navbar.navbar-transparent {
+    justify-content: space-between;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+/* Ensure toggler icon is visible */
+.navbar.navbar-transparent .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='%23ffffff' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E") !important;
+}
+
+/* When navbar is expanded, set background color */
+.navbar.navbar-transparent .navbar-collapse.show {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.navbar.navbar-transparent .navbar-collapse.show .navbar-nav {
+    display: block !important;
+}
+
+/* Hide the navbar-toggler on larger screens when not minimized */
+@media (min-width: 992px) {
+    .navbar .navbar-toggler {
+        display: none;
+    }
+}
+
+/* Adjust brand and toggler alignment */
+.navbar.navbar-transparent .navbar-brand {
+    margin-left: 20px;
+}
+
+.navbar.navbar-transparent .navbar-toggler {
+    margin-right: 20px;
+}
+
 /* Section Content */
 .section-content {
     min-height: 100vh;
@@ -347,5 +405,11 @@ h1, h2, p {
 @media (max-width: 480px) {
     .section-icon {
         max-width: 120px;
+    }
+}
+
+@media (min-width: 992px) {
+    .navbar .navbar-toggler {
+        display: none;
     }
 }
