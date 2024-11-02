@@ -88,28 +88,28 @@ document.addEventListener('DOMContentLoaded', () => {
                 description: 'Welcome to Duty! Here are the rules and details for this exciting challenge. Participants will engage in a series of tasks that require teamwork, strategic thinking, and creativity. Make sure to follow the instructions carefully to maximize your score!'
             },
             {
-                title: 'Event 2',
-                image: 'images/event2-banner.jpg',
+                title: 'Tug of War',
+                image: 'images/tug.jpg',
                 description: 'Welcome to Event 2! This event is all about speed and precision. Participants will face challenges that require quick thinking and problem-solving skills.'
             },
             {
-                title: 'Event 3',
-                image: 'images/event3-banner.jpg',
+                title: 'Tic Tac Toe',
+                image: 'images/ttt.jpg',
                 description: 'Event 3 is here! Get ready for a mix of physical and mental challenges. Make sure to work closely with your teammates to secure the highest points.'
             },
             {
-                title: 'Event 4',
-                image: 'images/event4-banner.jpg',
+                title: 'Kudi Nu Nachne De',
+                image: 'images/kudi.jpg',
                 description: 'In Event 4, participants will need to demonstrate their creativity and originality. Think outside the box to impress the judges and stand out!'
             },
             {
-                title: 'Event 5',
-                image: 'images/event5-banner.jpg',
+                title: 'Paint the Cloth',
+                image: 'images/paint.jpg',
                 description: 'Event 5 focuses on endurance and teamwork. Be prepared for activities that require both physical and strategic effort.'
             },
             {
-                title: 'Event 6',
-                image: 'images/event6-banner.jpg',
+                title: 'Dodgeball',
+                image: 'images/dodge.jpg',
                 description: 'The final Event 6 is all about leadership and collaboration. Make the most of your abilities and lead your team to victory!'
             }
         ];
