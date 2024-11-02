@@ -42,10 +42,10 @@ h1, h2, p {
     position: absolute;
     font-size: 5em;
     left: 50%;
-    transform: translateX(-50%); /* Center horizontally */
+    transform: translateX(-50%);
     white-space: nowrap;
     font-family: 'CustomFont', sans-serif;
-    opacity: 1; /* Ensure titles are visible initially */
+    opacity: 1;
 }
 
 /* Initial titles */
@@ -62,37 +62,15 @@ h1, h2, p {
 /* Combined title */
 #title-section-wars {
     top: 10%;
-    opacity: 0; /* Hidden initially */
-    transform: translateX(-50%); /* Center horizontally */
+    opacity: 0;
+    transform: translateX(-50%);
     animation: fadeInCombinedTitle 1s forwards;
-    animation-delay: 3s; /* Start after initial titles fade out */
-}
-
-/* Center the content in section-story */
-.section-story {
-    display: flex;
-    justify-content: center; /* Center horizontally */
-    align-items: center;     /* Center vertically */
-    padding: 20px;
-    background-color: #111;
-    font-family: sans-serif;
-}
-
-/* Container for the content */
-.section-story-content {
-    text-align: center;
-}
-
-/* Styles for Section Icons */
-.section-icon {
-    max-width: 200px;
-    height: auto;
-    margin-bottom: 20px;
+    animation-delay: 3s;
 }
 
 /* Enter Button Styles */
 #enter-button {
-    opacity: 0; /* Start hidden */
+    opacity: 0;
     position: absolute;
     bottom: 20%;
     left: 50%;
@@ -105,41 +83,40 @@ h1, h2, p {
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    pointer-events: none; /* Prevent clicking when invisible */
+    pointer-events: none;
     transition: opacity 1s;
-    /* Animation */
     animation: fadeInButton 1s forwards;
-    animation-delay: 4s; /* Start after combined title appears */
+    animation-delay: 4s;
 }
 
 /* Animation Keyframes */
 @keyframes sectionMove {
     0% {
-        transform: translate(-150%, 0); /* Off-screen left */
+        transform: translate(-150%, 0);
         opacity: 1;
     }
     70% {
-        transform: translate(-50%, 0); /* Center */
+        transform: translate(-50%, 0);
         opacity: 1;
     }
     100% {
-        transform: translate(-50%, 0); /* Center */
-        opacity: 0; /* Fade out */
+        transform: translate(-50%, 0);
+        opacity: 0;
     }
 }
 
 @keyframes warsMove {
     0% {
-        transform: translate(50%, 0); /* Off-screen right */
+        transform: translate(50%, 0);
         opacity: 1;
     }
     70% {
-        transform: translate(-50%, 0); /* Center */
+        transform: translate(-50%, 0);
         opacity: 1;
     }
     100% {
-        transform: translate(-50%, 0); /* Center */
-        opacity: 0; /* Fade out */
+        transform: translate(-50%, 0);
+        opacity: 0;
     }
 }
 
@@ -155,7 +132,7 @@ h1, h2, p {
 @keyframes fadeInButton {
     to {
         opacity: 1;
-        pointer-events: auto; /* Enable clicking when visible */
+        pointer-events: auto;
     }
 }
 
@@ -166,7 +143,8 @@ h1, h2, p {
     top: 0;
     width: 100%;
     z-index: 1000;
-    animation: fadeInNav 1s forwards 4s; /* Adjusted delay */
+    animation: fadeInNav 1s forwards 4s;
+    transition: background-color 0.3s ease;
 }
 
 @keyframes fadeInNav {
@@ -191,7 +169,6 @@ h1, h2, p {
     background-color: transparent !important;
     border: none;
     box-shadow: none;
-    transition: background-color 0.3s ease;
 }
 
 .navbar.navbar-transparent .navbar-nav {
@@ -199,7 +176,7 @@ h1, h2, p {
 }
 
 .navbar.navbar-transparent .navbar-brand {
-    color: #fff !important; /* Ensure the brand text is visible */
+    color: #fff !important;
     margin-left: 20px;
 }
 
@@ -219,7 +196,6 @@ h1, h2, p {
     background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='%23ffffff' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E") !important;
 }
 
-/* When navbar is expanded, set background color */
 .navbar.navbar-transparent .navbar-collapse.show {
     background-color: rgba(0, 0, 0, 0.8);
 }
@@ -259,7 +235,17 @@ h1, h2, p {
     background-color: #111;
     font-family: sans-serif;
     overflow-y: auto;
-    flex: 63; /* Occupies approximately 63% of the width */
+    flex: 63;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.section-icon {
+    max-width: 200px;
+    height: auto;
+    margin-bottom: 20px;
 }
 
 .image-slider {
@@ -267,7 +253,7 @@ h1, h2, p {
     width: 100%;
     height: 100%;
     overflow: hidden;
-    flex: 37; /* Occupies approximately 37% of the width */
+    flex: 37;
     border: 2px solid #000;
     box-sizing: border-box;
 }
@@ -291,10 +277,9 @@ h1, h2, p {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    z-index: 10; /* Ensure buttons are above slides */
+    z-index: 10;
 }
 
-/* Positioning */
 .swiper-button-next {
     right: 10px;
 }
@@ -312,13 +297,13 @@ h1, h2, p {
 
 /* Use Font Awesome icons */
 .swiper-button-next::after {
-    content: '\f054'; /* Font Awesome 'angle-right' icon */
+    content: '\f054';
     font-family: 'Font Awesome 6 Free';
     font-weight: 900;
 }
 
 .swiper-button-prev::after {
-    content: '\f053'; /* Font Awesome 'angle-left' icon */
+    content: '\f053';
     font-family: 'Font Awesome 6 Free';
     font-weight: 900;
 }
@@ -339,7 +324,126 @@ h1, h2, p {
     height: 100%;
 }
 
-/* Responsive Design */
+/* Event Page Styles */
+
+/* Event Section */
+.event-section {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    background-color: #111;
+    color: #fff;
+}
+
+/* Event Banner */
+.event-banner {
+    height: 30vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: #333;
+    padding: 20px;
+    text-align: center;
+}
+
+.event-banner img {
+    max-height: 100%;
+    max-width: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+
+#event-title {
+    font-family: 'CustomFont', sans-serif;
+    font-size: 3em;
+}
+
+/* Event Details */
+.event-details {
+    height: 70vh;
+    padding: 20px;
+    overflow-y: auto;
+    background-color: #222;
+}
+
+.event-details h2 {
+    font-size: 2em;
+    margin-bottom: 15px;
+}
+
+.event-details p {
+    font-size: 1.2em;
+    line-height: 1.6em;
+}
+
+/* Enter the Challenge Button for Event 1 */
+#enter-challenge-button {
+    display: none; /* Initially hidden */
+    position: absolute;
+    bottom: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 1.5em;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: #fff;
+    background-color: #721313;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: opacity 0.3s;
+}
+
+#enter-challenge-button.show {
+    display: block; /* Show the button when it is Event 1 */
+    opacity: 1;
+}
+
+
+/* Navigation Buttons */
+.event-navigation {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    transform: translateY(-50%);
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px;
+}
+
+.nav-button {
+    background: rgba(0, 0, 0, 0.7);
+    border: none;
+    color: #fff;
+    font-size: 2em;
+    cursor: pointer;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.3s;
+}
+
+.nav-button:hover {
+    background: rgba(114, 19, 19, 0.8);
+}
+
+.left-button {
+    position: absolute;
+    left: 10px;
+}
+
+.right-button {
+    position: absolute;
+    right: 10px;
+}
+
+/* Responsive Adjustments */
 @media (max-width: 767px) {
     .section-content {
         flex-direction: column;
@@ -360,15 +464,6 @@ h1, h2, p {
         height: auto;
     }
 
-    /* Adjust navigation buttons for mobile */
-    .swiper-button-next,
-    .swiper-button-prev {
-        top: auto;
-        bottom: 10px;
-        transform: none;
-    }
-
-    /* Adjust title font size and positions */
     .title-container h1 {
         font-size: 3em;
     }
@@ -382,13 +477,27 @@ h1, h2, p {
         top: 10%;
     }
 
-    /* Adjust button for mobile */
     #enter-button {
         font-size: 1.2em;
         padding: 8px 16px;
         bottom: 15%;
     }
+
+    #event-title {
+        font-size: 2.5em;
+    }
+
+    .event-details p {
+        font-size: 1em;
+    }
+
+    .nav-button {
+        width: 50px;
+        height: 50px;
+        font-size: 1.5em;
+    }
 }
+
 
 @media (max-width: 600px) {
     .title-container h1 {
@@ -400,16 +509,18 @@ h1, h2, p {
     #section-nav .navbar-nav .nav-link {
         font-size: 0.9em;
     }
+    .event-banner img {
+        width: 100%;
+        height: auto;
+    }
+    .nav-button {
+        width: 40px;
+        height: 40px;
+    }
 }
 
 @media (max-width: 480px) {
     .section-icon {
         max-width: 120px;
-    }
-}
-
-@media (min-width: 992px) {
-    .navbar .navbar-toggler {
-        display: none;
     }
 }
