@@ -1,0 +1,782 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+    <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
+    <script src="https://raw.githack.com/AR-js-org/studio-backend/master/src/modules/marker/tools/gesture-detector.js"></script>
+    <script src="https://raw.githack.com/AR-js-org/studio-backend/master/src/modules/marker/tools/gesture-handler.js"></script>
+  </head>
+
+  <body style="margin: 0; overflow: hidden">
+    <a-scene
+      vr-mode-ui="enabled: false;"
+      loading-screen="enabled: false;"
+      arjs="trackingMethod: best; sourceType: webcam; debugUIEnabled: false;"
+      id="scene"
+      embedded
+      gesture-detector
+    >
+      <a-marker
+        id="animated-marker1"
+        type="pattern"
+        preset="custom"
+        url="assets/pattern-1.patt"
+        raycaster="objects: .clickable"
+        emitevents="true"
+        cursor="fuse: false; rayOrigin: mouse;"
+        id="markerA"
+      >
+        <a-image
+          src="assets/1.png"
+          scale="1 1 1"
+          class="clickable"
+          rotation="-90 0 0"
+          gesture-handler
+        ></a-image>
+      </a-marker>
+
+      <a-marker
+        id="animated-marker2"
+        type="pattern"
+        preset="custom"
+        url="assets/pattern-2.patt"
+        raycaster="objects: .clickable"
+        emitevents="true"
+        cursor="fuse: false; rayOrigin: mouse;"
+        id="markerB"
+      >
+        <a-image
+          src="assets/2.png"
+          scale="1 1 1"
+          class="clickable"
+          rotation="-90 0 0"
+          gesture-handler
+        ></a-image>
+      </a-marker>
+
+      <a-marker
+        id="animated-marker3"
+        type="pattern"
+        preset="custom"
+        url="assets/pattern-3.patt"
+        raycaster="objects: .clickable"
+        emitevents="true"
+        cursor="fuse: false; rayOrigin: mouse;"
+        id="markerC"
+      >
+        <a-image
+          src="assets/3.png"
+          scale="1 1 1"
+          class="clickable"
+          rotation="-90 0 0"
+          gesture-handler
+        ></a-image>
+      </a-marker>
+
+      <a-marker
+        id="animated-marker4"
+        type="pattern"
+        preset="custom"
+        url="assets/pattern-4.patt"
+        raycaster="objects: .clickable"
+        emitevents="true"
+        cursor="fuse: false; rayOrigin: mouse;"
+        id="markerD"
+      >
+        <a-image
+          src="assets/4.png"
+          scale="1 1 1"
+          class="clickable"
+          rotation="-90 0 0"
+          gesture-handler
+        ></a-image>
+      </a-marker>
+
+      <a-marker
+        id="animated-marker5"
+        type="pattern"
+        preset="custom"
+        url="assets/pattern-5.patt"
+        raycaster="objects: .clickable"
+        emitevents="true"
+        cursor="fuse: false; rayOrigin: mouse;"
+        id="markerE"
+      >
+        <a-image
+          src="assets/5.png"
+          scale="1 1 1"
+          class="clickable"
+          rotation="-90 0 0"
+          gesture-handler
+        ></a-image>
+      </a-marker>
+
+      <a-marker
+        id="animated-marker6"
+        type="pattern"
+        preset="custom"
+        url="assets/pattern-6.patt"
+        raycaster="objects: .clickable"
+        emitevents="true"
+        cursor="fuse: false; rayOrigin: mouse;"
+        id="markerF"
+      >
+        <a-image
+          src="assets/meme1.jpeg"
+          scale="1 1 1"
+          class="clickable"
+          rotation="-90 0 0"
+          gesture-handler
+        ></a-image>
+      </a-marker>
+
+      <a-marker
+        id="animated-marker7"
+        type="pattern"
+        preset="custom"
+        url="assets/pattern-7.patt"
+        raycaster="objects: .clickable"
+        emitevents="true"
+        cursor="fuse: false; rayOrigin: mouse;"
+        id="markerG"
+      >
+        <a-image
+          src="assets/meme2.png"
+          scale="1 1 1"
+          class="clickable"
+          rotation="-90 0 0"
+          gesture-handler
+        ></a-image>
+      </a-marker>
+
+      <a-marker
+        id="animated-marker8"
+        type="pattern"
+        preset="custom"
+        url="assets/pattern-8.patt"
+        raycaster="objects: .clickable"
+        emitevents="true"
+        cursor="fuse: false; rayOrigin: mouse;"
+        id="markerH"
+      >
+        <a-image
+          src="assets/6.png"
+          scale="1 1 1"
+          class="clickable"
+          rotation="-90 0 0"
+          gesture-handler
+        ></a-image>
+      </a-marker>
+
+      <a-marker
+        id="animated-marker9"
+        type="pattern"
+        preset="custom"
+        url="assets/pattern-9.patt"
+        raycaster="objects: .clickable"
+        emitevents="true"
+        cursor="fuse: false; rayOrigin: mouse;"
+        id="markerI"
+      >
+        <a-image
+          src="assets/7.png"
+          scale="1 1 1"
+          class="clickable"
+          rotation="-90 0 0"
+          gesture-handler
+        ></a-image>
+      </a-marker>
+
+      <a-marker
+        id="animated-marker10"
+        type="pattern"
+        preset="custom"
+        url="assets/pattern-10.patt"
+        raycaster="objects: .clickable"
+        emitevents="true"
+        cursor="fuse: false; rayOrigin: mouse;"
+        id="markerJ"
+      >
+        <a-image
+          src="assets/8.png"
+          scale="1 1 1"
+          class="clickable"
+          rotation="-90 0 0"
+          gesture-handler
+        ></a-image>
+      </a-marker>
+
+      <a-marker
+        id="animated-marker11"
+        type="pattern"
+        preset="custom"
+        url="assets/pattern-11.patt"
+        raycaster="objects: .clickable"
+        emitevents="true"
+        cursor="fuse: false; rayOrigin: mouse;"
+        id="markerK"
+      >
+        <a-image
+          src="assets/meme3.jpeg"
+          scale="1 1 1"
+          class="clickable"
+          rotation="-90 0 0"
+          gesture-handler
+        ></a-image>
+      </a-marker>
+
+      <a-marker
+        id="animated-marker12"
+        type="pattern"
+        preset="custom"
+        url="assets/pattern-12.patt"
+        raycaster="objects: .clickable"
+        emitevents="true"
+        cursor="fuse: false; rayOrigin: mouse;"
+        id="markerL"
+      >
+        <a-image
+          src="assets/9.png"
+          scale="1 1 1"
+          class="clickable"
+          rotation="-90 0 0"
+          gesture-handler
+        ></a-image>
+      </a-marker>
+
+      <a-marker
+        id="animated-marker13"
+        type="pattern"
+        preset="custom"
+        url="assets/pattern-13.patt"
+        raycaster="objects: .clickable"
+        emitevents="true"
+        cursor="fuse: false; rayOrigin: mouse;"
+        id="markerM"
+      >
+        <a-image
+          src="assets/10.png"
+          scale="1 1 1"
+          class="clickable"
+          rotation="-90 0 0"
+          gesture-handler
+        ></a-image>
+      </a-marker>
+
+      <a-marker
+        id="animated-marker14"
+        type="pattern"
+        preset="custom"
+        url="assets/pattern-14.patt"
+        raycaster="objects: .clickable"
+        emitevents="true"
+        cursor="fuse: false; rayOrigin: mouse;"
+        id="markerN"
+      >
+        <a-image
+          src="assets/11.png"
+          scale="1 1 1"
+          class="clickable"
+          rotation="-90 0 0"
+          gesture-handler
+        ></a-image>
+      </a-marker>
+
+      <a-marker
+        id="animated-marker15"
+        type="pattern"
+        preset="custom"
+        url="assets/pattern-15.patt"
+        raycaster="objects: .clickable"
+        emitevents="true"
+        cursor="fuse: false; rayOrigin: mouse;"
+        id="markerO"
+      >
+        <a-image
+          src="assets/10.png"
+          scale="1 1 1"
+          class="clickable"
+          rotation="-90 0 0"
+          gesture-handler
+        ></a-image>
+      </a-marker>
+
+      <a-marker
+        id="animated-marker16"
+        type="pattern"
+        preset="custom"
+        url="assets/pattern-16.patt"
+        raycaster="objects: .clickable"
+        emitevents="true"
+        cursor="fuse: false; rayOrigin: mouse;"
+        id="markerP"
+      >
+        <a-image
+          src="assets/dummy2.jpeg"
+          scale="1 1 1"
+          class="clickable"
+          rotation="-90 0 0"
+          gesture-handler
+        ></a-image>
+      </a-marker>
+
+      <a-marker
+      id="animated-marker17"
+      type="pattern"
+      preset="custom"
+      url="assets/pattern-17.patt"
+      raycaster="objects: .clickable"
+      emitevents="true"
+      cursor="fuse: false; rayOrigin: mouse;"
+      id="markerQ"
+    >
+      <a-image
+        src="assets/13.png"
+        scale="1 1 1"
+        class="clickable"
+        rotation="-90 0 0"
+        gesture-handler
+      ></a-image>
+    </a-marker>
+
+    <a-marker
+    id="animated-marker18"
+    type="pattern"
+    preset="custom"
+    url="assets/pattern-18.patt"
+    raycaster="objects: .clickable"
+    emitevents="true"
+    cursor="fuse: false; rayOrigin: mouse;"
+    id="markerRR"
+  >
+    <a-image
+      src="assets/14.png"
+      scale="1 1 1"
+      class="clickable"
+      rotation="-90 0 0"
+      gesture-handler
+    ></a-image>
+  </a-marker>
+
+  <a-marker
+  id="animated-marker19"
+  type="pattern"
+  preset="custom"
+  url="assets/pattern-19.patt"
+  raycaster="objects: .clickable"
+  emitevents="true"
+  cursor="fuse: false; rayOrigin: mouse;"
+  id="markerPPPPPPPPP"
+>
+  <a-image
+    src="assets/15.png"
+    scale="1 1 1"
+    class="clickable"
+    rotation="-90 0 0"
+    gesture-handler
+  ></a-image>
+</a-marker>
+
+<a-marker
+id="animated-marker20"
+type="pattern"
+preset="custom"
+url="assets/pattern-20.patt"
+raycaster="objects: .clickable"
+emitevents="true"
+cursor="fuse: false; rayOrigin: mouse;"
+id="markerewewewP"
+>
+<a-image
+  src="assets/16.png"
+  scale="1 1 1"
+  class="clickable"
+  rotation="-90 0 0"
+  gesture-handler
+></a-image>
+</a-marker>
+
+<a-marker
+id="animated-marker21"
+type="pattern"
+preset="custom"
+url="assets/pattern-21.patt"
+raycaster="objects: .clickable"
+emitevents="true"
+cursor="fuse: false; rayOrigin: mouse;"
+id="markerPRER"
+>
+<a-image
+  src="assets/17.png"
+  scale="1 1 1"
+  class="clickable"
+  rotation="-90 0 0"
+  gesture-handler
+></a-image>
+</a-marker>
+
+<a-marker
+id="animated-marker22"
+type="pattern"
+preset="custom"
+url="assets/pattern-22.patt"
+raycaster="objects: .clickable"
+emitevents="true"
+cursor="fuse: false; rayOrigin: mouse;"
+id="markesdsdsdsrP"
+>
+<a-image
+  src="assets/18.png"
+  scale="1 1 1"
+  class="clickable"
+  rotation="-90 0 0"
+  gesture-handler
+></a-image>
+</a-marker>
+
+<a-marker
+id="animated-marker23"
+type="pattern"
+preset="custom"
+url="assets/pattern-23.patt"
+raycaster="objects: .clickable"
+emitevents="true"
+cursor="fuse: false; rayOrigin: mouse;"
+id="markerwewdasdP"
+>
+<a-image
+  src="assets/19.png"
+  scale="1 1 1"
+  class="clickable"
+  rotation="-90 0 0"
+  gesture-handler
+></a-image>
+</a-marker>
+
+<a-marker
+id="animated-marker24"
+type="pattern"
+preset="custom"
+url="assets/pattern-24.patt"
+raycaster="objects: .clickable"
+emitevents="true"
+cursor="fuse: false; rayOrigin: mouse;"
+id="marasdasdasdfakerP"
+>
+<a-image
+  src="assets/20.png"
+  scale="1 1 1"
+  class="clickable"
+  rotation="-90 0 0"
+  gesture-handler
+></a-image>
+</a-marker>
+
+<a-marker
+id="animated-marker25"
+type="pattern"
+preset="custom"
+url="assets/pattern-25.patt"
+raycaster="objects: .clickable"
+emitevents="true"
+cursor="fuse: false; rayOrigin: mouse;"
+id="markedsdsdsasfasdrP"
+>
+<a-image
+  src="assets/21.png"
+  scale="1 1 1"
+  class="clickable"
+  rotation="-90 0 0"
+  gesture-handler
+></a-image>
+</a-marker>
+
+<a-marker
+id="animated-marker26"
+type="pattern"
+preset="custom"
+url="assets/pattern-26.patt"
+raycaster="objects: .clickable"
+emitevents="true"
+cursor="fuse: false; rayOrigin: mouse;"
+id="markedsdsdsasfadsdsdsdsdrP"
+>
+<a-image
+  src="assets/22.png"
+  scale="1 1 1"
+  class="clickable"
+  rotation="-90 0 0"
+  gesture-handler
+></a-image>
+</a-marker>
+
+<a-marker
+id="animated-marker27"
+type="pattern"
+preset="custom"
+url="assets/pattern-27.patt"
+raycaster="objects: .clickable"
+emitevents="true"
+cursor="fuse: false; rayOrigin: mouse;"
+id="markedsdsdsasfassdsdsdrP"
+>
+<a-image
+  src="assets/23.png"
+  scale="1 1 1"
+  class="clickable"
+  rotation="-90 0 0"
+  gesture-handler
+></a-image>
+</a-marker>
+
+<a-marker
+id="animated-marker28"
+type="pattern"
+preset="custom"
+url="assets/pattern-28.patt"
+raycaster="objects: .clickable"
+emitevents="true"
+cursor="fuse: false; rayOrigin: mouse;"
+id="markedsdasdasdsdsasfasdrP"
+>
+<a-image
+  src="assets/24.png"
+  scale="1 1 1"
+  class="clickable"
+  rotation="-90 0 0"
+  gesture-handler
+></a-image>
+</a-marker>
+
+<a-marker
+id="animated-marker29"
+type="pattern"
+preset="custom"
+url="assets/pattern-29.patt"
+raycaster="objects: .clickable"
+emitevents="true"
+cursor="fuse: false; rayOrigin: mouse;"
+id="markedsdsdsaasdasdsadasdsfasdrP"
+>
+<a-image
+  src="assets/25.png"
+  scale="1 1 1"
+  class="clickable"
+  rotation="-90 0 0"
+  gesture-handler
+></a-image>
+</a-marker>
+
+<a-marker
+id="animated-marker30"
+type="pattern"
+preset="custom"
+url="assets/pattern-30.patt"
+raycaster="objects: .clickable"
+emitevents="true"
+cursor="fuse: false; rayOrigin: mouse;"
+id="markedsdsdsasfasdrP"
+>
+<a-image
+  src="assets/26.png"
+  scale="1 1 1"
+  class="clickable"
+  rotation="-90 0 0"
+  gesture-handler
+></a-image>
+</a-marker>
+
+<a-marker
+id="animated-marker31"
+type="pattern"
+preset="custom"
+url="assets/pattern-31.patt"
+raycaster="objects: .clickable"
+emitevents="true"
+cursor="fuse: false; rayOrigin: mouse;"
+id="markedsdsdsadasddddddsasfasdrP"
+>
+<a-image
+  src="assets/27.png"
+  scale="1 1 1"
+  class="clickable"
+  rotation="-90 0 0"
+  gesture-handler
+></a-image>
+</a-marker>
+
+<a-marker
+id="animated-marker32"
+type="pattern"
+preset="custom"
+url="assets/pattern-32.patt"
+raycaster="objects: .clickable"
+emitevents="true"
+cursor="fuse: false; rayOrigin: mouse;"
+id="markedsdsdsaasdasdsadasadddsfasdrP"
+>
+<a-image
+  src="assets/28.png"
+  scale="1 1 1"
+  class="clickable"
+  rotation="-90 0 0"
+  gesture-handler
+></a-image>
+</a-marker>
+
+<a-marker
+id="animated-marker33"
+type="pattern"
+preset="custom"
+url="assets/pattern-33.patt"
+raycaster="objects: .clickable"
+emitevents="true"
+cursor="fuse: false; rayOrigin: mouse;"
+id="markedsdsooooooooooodsasfasdrP"
+>
+<a-image
+  src="assets/meme6.png"
+  scale="1 1 1"
+  class="clickable"
+  rotation="-90 0 0"
+  gesture-handler
+></a-image>
+</a-marker>
+
+<a-marker
+id="animated-marker34"
+type="pattern"
+preset="custom"
+url="assets/pattern-34.patt"
+raycaster="objects: .clickable"
+emitevents="true"
+cursor="fuse: false; rayOrigin: mouse;"
+id="markedssdsdssdsooooooooooodsasfasdrP"
+>
+<a-image
+  src="assets/meme5.png"
+  scale="1 1 1"
+  class="clickable"
+  rotation="-90 0 0"
+  gesture-handler
+></a-image>
+</a-marker>
+
+<a-marker
+id="animated-marker35"
+type="pattern"
+preset="custom"
+url="assets/pattern-35.patt"
+raycaster="objects: .clickable"
+emitevents="true"
+cursor="fuse: false; rayOrigin: mouse;"
+id="markedsdsoooooooijwaoidiowoooodsasfasdrP"
+>
+<a-image
+  src="assets/meme4.png"
+  scale="1 1 1"
+  class="clickable"
+  rotation="-90 0 0"
+  gesture-handler
+></a-image>
+</a-marker>
+
+<a-marker
+id="animated-marker36"
+type="pattern"
+preset="custom"
+url="assets/pattern-36.patt"
+raycaster="objects: .clickable"
+emitevents="true"
+cursor="fuse: false; rayOrigin: mouse;"
+id="markedsdsooooooooosdnnnrbunasdfoodsasfasdrP"
+>
+<a-image
+  src="assets/meme3.jpeg"
+  scale="1 1 1"
+  class="clickable"
+  rotation="-90 0 0"
+  gesture-handler
+></a-image>
+</a-marker>
+
+<a-marker
+id="animated-marker37"
+type="pattern"
+preset="custom"
+url="assets/pattern-37.patt"
+raycaster="objects: .clickable"
+emitevents="true"
+cursor="fuse: false; rayOrigin: mouse;"
+id="markedsdadasdasdassooooooooooodsasfasdrP"
+>
+<a-image
+  src="assets/meme2.png"
+  scale="1 1 1"
+  class="clickable"
+  rotation="-90 0 0"
+  gesture-handler
+></a-image>
+</a-marker>
+
+<a-marker
+id="animated-marker38"
+type="pattern"
+preset="custom"
+url="assets/pattern-38.patt"
+raycaster="objects: .clickable"
+emitevents="true"
+cursor="fuse: false; rayOrigin: mouse;"
+id="markedsdsooooooooooodsasfasdrP"
+>
+<a-image
+  src="assets/meme1.jpeg"
+  scale="1 1 1"
+  class="clickable"
+  rotation="-90 0 0"
+  gesture-handler
+></a-image>
+</a-marker>
+
+<a-marker
+id="animated-marker39"
+type="pattern"
+preset="custom"
+url="assets/pattern-39.patt"
+raycaster="objects: .clickable"
+emitevents="true"
+cursor="fuse: false; rayOrigin: mouse;"
+id="markedsdsooooooooooodasdasdsadsasfasdrP"
+>
+<a-image
+  src="assets/meme5.jpeg"
+  scale="1 1 1"
+  class="clickable"
+  rotation="-90 0 0"
+  gesture-handler
+></a-image>
+</a-marker>
+
+<a-marker
+id="animated-marker40"
+type="pattern"
+preset="custom"
+url="assets/pattern-40.patt"
+raycaster="objects: .clickable"
+emitevents="true"
+cursor="fuse: false; rayOrigin: mouse;"
+id="markedsdsooooooooooodsasfasdrP"
+>
+<a-image
+  src="assets/meme3.jpeg"
+  scale="1 1 1"
+  class="clickable"
+  rotation="-90 0 0"
+  gesture-handler
+></a-image>
+</a-marker>
+
+      <a-entity camera></a-entity>
+    </a-scene>
+  </body>
+</html>

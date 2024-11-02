@@ -84,7 +84,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const events = [
             {
                 title: 'Duty',
-                image: 'images/event1-banner.jpg',
+                image: 'images/Duty-banner.jpg',
                 description: 'Welcome to Duty! Here are the rules and details for this exciting challenge. Participants will engage in a series of tasks that require teamwork, strategic thinking, and creativity. Make sure to follow the instructions carefully to maximize your score!'
             },
             {
