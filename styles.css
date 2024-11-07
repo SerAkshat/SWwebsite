@@ -430,7 +430,7 @@ h2 {
 /* Navigation Buttons */
 .event-navigation {
     position: absolute;
-    top: 50%;
+    top: 80%;
     width: 100%;
     transform: translateY(-50%);
     display: flex;
