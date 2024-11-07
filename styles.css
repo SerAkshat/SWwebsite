@@ -213,14 +213,23 @@ h2 {
 }
 
 .navbar.navbar-transparent .navbar-collapse.show .navbar-nav {
-    background-image: url('images/burger.png') !important;
     display: block !important;
 }
 
 /* Hide the navbar-toggler on larger screens when not minimized */
 @media (min-width: 992px) {
     .navbar .navbar-toggler {
-        display: none;
+        display: block !important;
+        margin-right: 20px;
+    }
+
+    /* Set a background image or color for the toggler icon if it’s not visible */
+    .navbar .navbar-toggler-icon {
+        background-image: url('images/burger.png') !important; /* Adjust to your icon */
+        background-size: contain;
+        background-repeat: no-repeat;
+        width: 24px;
+        height: 24px;
     }
 }
 .navbar-brand {

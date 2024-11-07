@@ -4,6 +4,8 @@ document.addEventListener('DOMContentLoaded', () => {
         setTimeout(() => {
             const homeSection = document.getElementById('home');
             homeSection.style.backgroundImage = "url('images/bg2.png')";
+            homeSection.style.backgroundSize = "cover"; // Keeps it from adjusting responsively
+            homeSection.style.backgroundPosition = "center center";
         }, 4000); // Adjust this timing to match the end of your animation
 
         // Smooth scrolling for navigation links
