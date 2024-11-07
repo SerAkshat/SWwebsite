@@ -1,11 +1,12 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // Initialize Foundation (if still needed)
-    if (typeof $ !== 'undefined' && typeof $(document).foundation === 'function') {
-        $(document).foundation();
-    }
+    // For index.html - Change background after animation
+    if (document.getElementById('home')) {
+        setTimeout(() => {
+            const homeSection = document.getElementById('home');
+            homeSection.style.backgroundImage = "url('images/bg2.png')";
+        }, 4000); // Adjust this timing to match the end of your animation
 
-    // Navigation Scroll (for index.html)
-    if (document.querySelector('#section-nav')) {
+        // Smooth scrolling for navigation links
         const navLinks = document.querySelectorAll('#section-nav a.nav-link');
         navLinks.forEach(link => {
             link.addEventListener('click', (e) => {
@@ -15,7 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         });
 
-        // Add smooth scroll for the navbar brand
+        // Smooth scrolling for the navbar brand
         const navbarBrand = document.querySelector('.navbar-brand');
         navbarBrand.addEventListener('click', (e) => {
             e.preventDefault();
@@ -23,63 +24,55 @@ document.addEventListener('DOMContentLoaded', () => {
             document.querySelector(sectionId).scrollIntoView({ behavior: 'smooth' });
         });
 
-        // Collapse the navbar when a link is clicked (on mobile screens)
+        // Collapse the navbar when a link is clicked on mobile screens
         const navbarCollapse = document.querySelector('.navbar-collapse');
         const navbarItems = document.querySelectorAll('.navbar-nav .nav-link');
-
-        navbarItems.forEach((item) => {
+        navbarItems.forEach(item => {
             item.addEventListener('click', () => {
                 if (navbarCollapse.classList.contains('show')) {
-                    const collapse = new bootstrap.Collapse(navbarCollapse, {
-                        toggle: false
-                    });
+                    const collapse = new bootstrap.Collapse(navbarCollapse, { toggle: false });
                     collapse.hide();
                 }
             });
         });
 
-        // Function to update navbar on scroll
+        // Navbar visibility on scroll
         function updateNavbar() {
             const navbar = document.getElementById('section-nav');
             const scrollPosition = window.scrollY || window.pageYOffset;
             const homeSectionHeight = document.getElementById('home').offsetHeight;
 
             if (scrollPosition >= homeSectionHeight) {
-                // User has scrolled past the home section
                 navbar.classList.add('navbar-transparent');
             } else {
-                // User is at the top section
                 navbar.classList.remove('navbar-transparent');
             }
         }
 
-        // Listen for scroll events
         window.addEventListener('scroll', updateNavbar);
+        updateNavbar(); // Initial check
 
-        // Call the function on page load in case the user refreshes at a scrolled position
-        updateNavbar();
+        // Initialize Swiper for each image slider (if exists)
+        const sliders = document.querySelectorAll('.swiper');
+        sliders.forEach(slider => {
+            const sliderId = '#' + slider.getAttribute('id');
+            new Swiper(sliderId, {
+                loop: false,
+                navigation: {
+                    nextEl: `${sliderId} .swiper-button-next`,
+                    prevEl: `${sliderId} .swiper-button-prev`,
+                },
+                pagination: {
+                    el: `${sliderId} .swiper-pagination`,
+                    clickable: true,
+                },
+                simulateTouch: true,
+                grabCursor: true,
+            });
+        });
     }
 
-    // Initialize Swiper for each image slider (if exists)
-    const sliders = document.querySelectorAll('.swiper');
-    sliders.forEach((slider) => {
-        const sliderId = '#' + slider.getAttribute('id');
-        new Swiper(sliderId, {
-            loop: false,
-            navigation: {
-                nextEl: `${sliderId} .swiper-button-next`,
-                prevEl: `${sliderId} .swiper-button-prev`,
-            },
-            pagination: {
-                el: `${sliderId} .swiper-pagination`,
-                clickable: true,
-            },
-            simulateTouch: true,
-            grabCursor: true,
-        });
-    });
-
-    // For the sw.html page, handle the navigation between events in a circular manner
+    // For sw.html - Event navigation
     if (document.getElementById('event-content')) {
         const events = [
             {
@@ -95,15 +88,15 @@ document.addEventListener('DOMContentLoaded', () => {
             {
                 title: 'Territory Takeover',
                 image: 'images/ttt.png',
-                description: 'Claim your turf and conquer with every X and O – its a fast-paced fight for cartel territory!'
+                description: 'Claim your turf and conquer with every X and O – it\'s a fast-paced fight for cartel territory!'
             },
             {
-                title: 'Kudi Nu Nachne De',
+                title: 'Mafia Moves',
                 image: 'images/kudi.png',
                 description: 'Step into the dance floor battlefield, where every move counts in this cartel clash for dominance!'
             },
             {
-                title: 'Mural of mayhem',
+                title: 'Mural of Mayhem',
                 image: 'images/paint.png',
                 description: 'Unleash chaos on the canvas – paint like a cartel in a frenzy and let no inch stay unmarked!'
             }
@@ -135,25 +128,17 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // Left Arrow Click (circular navigation)
         leftArrow.addEventListener('click', () => {
-            if (currentIndex === 0) {
-                currentIndex = events.length - 1; // Go to last event if on first event
-            } else {
-                currentIndex--;
-            }
+            currentIndex = (currentIndex === 0) ? events.length - 1 : currentIndex - 1;
             updateEvent(currentIndex);
         });
 
         // Right Arrow Click (circular navigation)
         rightArrow.addEventListener('click', () => {
-            if (currentIndex === events.length - 1) {
-                currentIndex = 0; // Go to first event if on last event
-            } else {
-                currentIndex++;
-            }
+            currentIndex = (currentIndex === events.length - 1) ? 0 : currentIndex + 1;
             updateEvent(currentIndex);
         });
 
-        // Initialize with Event 1
+        // Initialize with the first event
         updateEvent(currentIndex);
     }
 });
