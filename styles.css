@@ -219,17 +219,7 @@ h2 {
 /* Hide the navbar-toggler on larger screens when not minimized */
 @media (min-width: 992px) {
     .navbar .navbar-toggler {
-        display: block !important;
-        margin-right: 20px;
-    }
-
-    /* Set a background image or color for the toggler icon if it’s not visible */
-    .navbar .navbar-toggler-icon {
-        background-image: url('images/burger.png') !important; /* Adjust to your icon */
-        background-size: contain;
-        background-repeat: no-repeat;
-        width: 24px;
-        height: 24px;
+        display: none;
     }
 }
 .navbar-brand {
