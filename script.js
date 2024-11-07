@@ -88,29 +88,24 @@ document.addEventListener('DOMContentLoaded', () => {
                 description: 'Welcome to Duty! Here are the rules and details for this exciting challenge. Participants will engage in a series of tasks that require teamwork, strategic thinking, and creativity. Make sure to follow the instructions carefully to maximize your score!'
             },
             {
-                title: 'Tug of War',
-                image: 'images/tug.jpg',
-                description: 'Welcome to Event 2! This event is all about speed and precision. Participants will face challenges that require quick thinking and problem-solving skills.'
+                title: 'Cartel Shootout',
+                image: 'images/CS.png',
+                description: 'It’s dodgeball evening as sections go head-to-head in 1v1 battles. Be there at 6:30 PM sharp to see who comes out on top. Bring your game face!'
             },
             {
-                title: 'Tic Tac Toe',
-                image: 'images/ttt.jpg',
-                description: 'Event 3 is here! Get ready for a mix of physical and mental challenges. Make sure to work closely with your teammates to secure the highest points.'
+                title: 'Territory Takeover',
+                image: 'images/ttt.png',
+                description: 'Claim your turf and conquer with every X and O – its a fast-paced fight for cartel territory!'
             },
             {
                 title: 'Kudi Nu Nachne De',
-                image: 'images/kudi.jpg',
-                description: 'In Event 4, participants will need to demonstrate their creativity and originality. Think outside the box to impress the judges and stand out!'
+                image: 'images/kudi.png',
+                description: 'Step into the dance floor battlefield, where every move counts in this cartel clash for dominance!'
             },
             {
-                title: 'Paint the Cloth',
-                image: 'images/paint.jpg',
-                description: 'Event 5 focuses on endurance and teamwork. Be prepared for activities that require both physical and strategic effort.'
-            },
-            {
-                title: 'Dodgeball',
-                image: 'images/dodge.jpg',
-                description: 'The final Event 6 is all about leadership and collaboration. Make the most of your abilities and lead your team to victory!'
+                title: 'Mural of mayhem',
+                image: 'images/paint.png',
+                description: 'Unleash chaos on the canvas – paint like a cartel in a frenzy and let no inch stay unmarked!'
             }
         ];
 
