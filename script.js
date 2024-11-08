@@ -1,12 +1,13 @@
 document.addEventListener('DOMContentLoaded', () => {
     // For index.html - Change background after animation
     if (document.getElementById('home')) {
+        homeSection.style.backgroundImage = "url('images/redBg.png')"; // Set initial background to redBg.png
+
+        // Change to bg2.png after animation completes
         setTimeout(() => {
-            const homeSection = document.getElementById('home');
             homeSection.style.backgroundImage = "url('images/bg2.png')";
-            homeSection.style.backgroundSize = "cover"; // Keeps it from adjusting responsively
-            homeSection.style.backgroundPosition = "center center";
         }, 4000); // Adjust this timing to match the end of your animation
+        
 
         // Smooth scrolling for navigation links
         const navLinks = document.querySelectorAll('#section-nav a.nav-link');
@@ -78,9 +79,9 @@ document.addEventListener('DOMContentLoaded', () => {
     if (document.getElementById('event-content')) {
         const events = [
             {
-                title: 'Duty',
-                image: 'images/Duty-banner.jpg',
-                description: 'Welcome to Duty! Here are the rules and details for this exciting challenge. Participants will engage in a series of tasks that require teamwork, strategic thinking, and creativity. Make sure to follow the instructions carefully to maximize your score!'
+                title: 'Cartel Rush',
+                image: 'images/Duty-banner.png',
+                description: "Embark on a campus-wide cartel mission, uncover hidden secrets, and race to complete daring tasks. It’s a rush to the finish like no other!"
             },
             {
                 title: 'Cartel Shootout',
@@ -88,9 +89,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 description: 'It’s dodgeball evening as sections go head-to-head in 1v1 battles. Be there at 6:30 PM sharp to see who comes out on top. Bring your game face!'
             },
             {
-                title: 'Territory Takeover',
+                title: 'Dominance Duel',
                 image: 'images/ttt.png',
-                description: 'Claim your turf and conquer with every X and O – it\'s a fast-paced fight for cartel territory!'
+                description: 'Lock horns in the ultimate test of strength and strategy—only the dominant side will claim victory!'
             },
             {
                 title: 'Mafia Moves',
