@@ -1,11 +1,11 @@
 document.addEventListener('DOMContentLoaded', () => {
     // For index.html - Change background after animation
     if (document.getElementById('home')) {
-        homeSection.style.backgroundImage = "url('images/redBg.png')"; // Set initial background to redBg.png
-
-        // Change to bg2.png after animation completes
         setTimeout(() => {
+            const homeSection = document.getElementById('home');
             homeSection.style.backgroundImage = "url('images/bg2.png')";
+            homeSection.style.backgroundSize = "cover"; // Keeps it from adjusting responsively
+            homeSection.style.backgroundPosition = "center center";
         }, 4000); // Adjust this timing to match the end of your animation
         
 
