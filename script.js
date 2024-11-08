@@ -86,7 +86,7 @@ document.addEventListener('DOMContentLoaded', () => {
             {
                 title: 'Cartel Shootout',
                 image: 'images/CS.png',
-                description: 'It’s dodgeball evening as sections go head-to-head in 1v1 battles. Be there at 6:30 PM sharp to see who comes out on top. Bring your game face!'
+                description: 'It’s dodgeball evening as sections go head-to-head in 1v1 battles. Be there to see who comes out on top. Bring your game face!'
             },
             {
                 title: 'Dominance Duel',
